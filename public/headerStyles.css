@@ -1,0 +1,51 @@
+body {
+    margin: 10px auto;
+    background-color: #f6f6ef;
+    width: 90%;
+    box-sizing: border-box;
+}
+
+.topItems h4 {
+    display: inline;
+    background-color: #ff6600;
+    position: relative;
+    bottom: 0px;
+    font-size: larger;
+}
+
+.topItems a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    font-size: 25px;
+    position: relative;
+    bottom: 5px;
+}
+
+.navigation {
+    background-color: #ff6600;
+}
+
+.topItems {
+    background-color: #ff6600;
+}
+
+.submit button {
+    border: none;
+    background-color: #ff6600;
+    font-size: 20px;
+}
+
+img {
+    position: relative;
+    top: 5px;
+}
+
+.login button {
+    border: none;
+    background-color: #ff6600;
+    font-size: 20px;
+    position: relative;
+    left: 800px;
+    cursor: pointer;
+}

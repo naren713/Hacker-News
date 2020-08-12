@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hacker News</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light mx-auto mt-1 p-0" style="background-color: #ff6600; width: 1400px; height: 50px;">
+        <a href="/"><img src="../Images/icons8-y-combinator-40.png" alt="Y" /></a>
+        <a class="navbar-brand font-weight-bolder" href="/">Hacker News</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto font-weight-bold">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/news">news |</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">past |</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">comments |</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">ask |</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">show |</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">jobs |</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/submit">Submit</a>
+                </li>
+                <li class="nav-item active ml-5">
+                    <a class="nav-link" style="margin-left: 400px;" href="/logout">logout</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div style="margin-left: 250px; margin-top: 20px;">
+      <% posts.forEach((items)=>{ %>
+      <strong style="font-size: 25px;"><%= items.postId %>.</strong>
+      <a href="" class="title">
+        <b><%= items.title %></b>
+      </a> (
+                    <a href="">
+                        <%= items.url %>
+                    </a>)
+                    <br />
+                    <%= items.text %>
+                        <br />
+                        <a href="/dashboard/edit/<%= items.id %>">Edit</a>
+                        <form method="Post" action="/dashboard/delete/<%= items.id %>?_method=DELETE">
+                            <button type="submit">Delete</button>
+                        </form>
+                        <br />
+                        <br />
+                        <% }); %>
+        </div>
+</body>
+
+</html>

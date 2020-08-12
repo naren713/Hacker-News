@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hacker News</title>
+</head>
+
+<body>
+    <%- include("./partials/header.ejs") %>
+        <div style="margin-left: 250px; margin-top: 20px;">
+            <% posts.forEach((items)=>{ %>
+                <strong style="font-size: 25px;"><%= items.postId %>.</strong>
+                <a href="" class="title">
+                    <b><%= items.title %></b>
+                </a>
+                (
+                <a href="">
+                    <%= items.url %>
+                </a>)
+                <br />
+                <%= items.text %>
+                    <br />
+                    <br />
+                    <% }); %>
+        </div>
+</body>
+
+</html>
